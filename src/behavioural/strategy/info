@@ -1,0 +1,43 @@
+The Strategy should be used when you have several implementations for one purpose in your application. 
+In this case you create strategy-interface, concrete realizations of the interface, and 
+finally a context class which will encapsulate all logic in some methods.
+
+Strategy pattern is also known as Policy Pattern. We defines multiple algorithms and 
+let client application pass the algorithm to be used as a parameter. 
+One of the best example of this pattern is Collections.sort() method that takes Comparator parameter. 
+Based on the different implementations of Comparator interfaces,
+ the Objects are getting sorted in different ways
+
+In computer programming, the strategy pattern (also known as the policy pattern) is a software design
+ pattern, whereby an algorithm's behaviour can be selected at runtime. 
+ Formally speaking, the strategy pattern defines a family of algorithms, encapsulates each one, 
+ and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
+ [According to the strategy pattern, the behaviors of a class should not be inherited. 
+ Instead they should be encapsulated using interfaces. 
+ As an example, consider a car class. Two possible functionalities for car are brake and accelerate.
+Since accelerate and brake behaviors change frequently between models,
+ a common approach is to implement these behaviors in subclasses. 
+ This approach has significant drawbacks: accelerate and brake behaviors must be declared in each new Car
+  model. The work of managing these behaviors increases greatly as the number of models increases, 
+  and requires code to be duplicated across models. Additionally, it is not easy to determine the exact
+   nature of the behavior for each model without investigating the code in each.
+The strategy pattern uses aggregation instead of inheritance. 
+In the strategy pattern, behaviors are defined as separate interfaces and specific classes that implement
+ these interfaces. Specific classes encapsulate these interfaces. 
+ This allows better decoupling between the behavior and the class that uses the behavior. 
+ The behavior can be changed without breaking the classes that use it, and the classes can switch between
+  behaviors by changing the specific implementation used without requiring any significant code changes.
+  
+Advantages:
+
+    The algorithms and behaviors can be reused.
+    The algorithms are loosely coupled with the context entity. 
+    They can be changed/replaced without changing the context entity.
+    Prevents the conditional statements.
+    Very easy extendable.
+
+Disadvantages:
+
+    Client must be aware of the various strategies, thus helping him decide the best strategy.
+    It increases the number of objects in the application.
+  

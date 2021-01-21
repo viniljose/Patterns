@@ -1,0 +1,7 @@
+Allows for one or more operation to be applied to a set of objects at runtime, decoupling the operations 
+from the object structure.The pattern should be used when you have distinct and unrelated operations to
+perform across a structure of objects.   
+
+The arguments and return types for the visiting methods needs to be known in advance, 
+so the Visitor pattern is not good for situations where these visited classes are subject to change. 
+Every time a new type of Element is added, every Visitor derived class must be amended.  
